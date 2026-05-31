@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- mode: python ; coding: utf-8 -*-
 
 a = Analysis(
@@ -35,4 +36,43 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     icon=None,      # Puedes poner 'icono.ico' si tienes uno
+=======
+# -*- mode: python ; coding: utf-8 -*-
+
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[],
+    hiddenimports=['tqdm'],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+)
+
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='FileOrganizer',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=True,   # Importante: consola visible para interacción
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=None,      # Puedes poner 'icono.ico' si tienes uno
+>>>>>>> 54b05133cd9a9bbcaa8f51ab228ce816d717c5e7
 )
